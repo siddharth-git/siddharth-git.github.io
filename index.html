@@ -12,7 +12,8 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('./BgEffect.jpg'); /* Replace 'background-image.jpg' with your actual image path */
+            background-image: url('./BgEffect.jpg');
+            /* Replace 'background-image.jpg' with your actual image path */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -36,6 +37,10 @@
             margin-top: 20px;
         }
 
+        #footer {
+            font-size:10px;
+        }
+
     </style>
 </head>
 
@@ -51,13 +56,20 @@
             <button class="btn-primary" id="generateButton" type="submit">Generate</button>
         </form>
         <div id="result"></div>
+        <div id="footer" class="footer-copyright text-center py-3">Powered by 
+            <a href="/" onclick="redirectSST()">@SuperSimpleTechie</a>
+          </div>
     </div>
+
 
     <script>
 
         const generateButton = document.getElementById("generateButton");
 
-
+        const redirectSST= () =>{
+            event.preventDefault();
+            alert("Work in progress!!");
+        }
         document.getElementById("tokenForm").addEventListener("submit", function (event) {
             event.preventDefault();
             const inputQ = parseInt(document.getElementById("inputQ").value);
